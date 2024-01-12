@@ -25,7 +25,7 @@ inpt.addEventListener("blur", function (e) {
 async function getWeather(key) {
   // get Data
   let resp = await fetch(
-    `http://api.weatherapi.com/v1/forecast.json?key=e6de3c7ea2c1421f835175439240101&q=${key}&days=3`
+    `https://api.weatherapi.com/v1/forecast.json?key=e6de3c7ea2c1421f835175439240101&q=${key}&days=3`
   );
   let data = await resp.json();
   let d = new Date(data.location.localtime);
@@ -130,4 +130,3 @@ function clock() {
   setTimeout(clock, 1000);
 }
 clock();
-// console.log(hourse);
