@@ -48,20 +48,37 @@ footer {
     }
 }
 
+.lg-screen {
+    display: none;
+}
+
+@media screen and (max-width:600px) {
+    .lg-screen {
+        display: block !important;
+    }
+}
+
 /* search sectin */
 .search {
-    background-image: url('../images/imgs/pexels-aedrian-11215833.jpg');
+    position: relative;
+    /* background-image: url('../images/imgs/pexels-aedrian-11215833.jpg');
     background-image: url('../images/imgs/pexels-eberhard-grossgasteiger-1367192.jpg');
     background-image: url('../images/imgs/pexels-eberhard-grossgasteiger-2310641.jpg');
     background-image: url('../images/imgs/pexels-kelly-2874066.jpg');
     background-image: url('../images/imgs/pexels-mohamed-almari-1485894.jpg');
     background-image: url('../images/imgs/pexels-nicole-avagliano-2749481.jpg');
-    background-image: url('../images/imgs/pexels-pok-rie-1276672.jpg');
+    background-image: url('../images/imgs/pexels-pok-rie-1276672.jpg'); */
     background-image: url('../images/imgs/photo-1548220215-b93b556d5cd6.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     padding: 20px;
+}
+
+.search .layer {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
 input {

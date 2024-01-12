@@ -117,16 +117,28 @@ getWeather("egypt");
 // }
 
 //clock
+
+
+
+
+
 function clock() {
   let now = new Date();
 
   let hourse = now.getHours();
   let minut = now.getMinutes();
   let second = now.getSeconds();
-  document.querySelectorAll(".time").innerText = `${hourse}:${minut}:${second}`;
-
-  let day = now.getDay();
-  document.querySelectorAll(".day").innerText = `${nameOfDays[day]}`;
+  let timeSpan = document.querySelectorAll(".time");
+  timeSpan.forEach((e) => (e.innerText = `${hourse}:${minut}:${second}`));
   setTimeout(clock, 1000);
 }
+
+// Day
+function calender() {
+  let now = new Date();
+  let day = now.getDay();
+  let timeSpan = document.querySelectorAll(".day");
+  timeSpan.forEach((e) => (e.innerText = `${nameOfDays[day]}`));
+}
+calender();
 clock();
